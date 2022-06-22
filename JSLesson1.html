@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSLesson</title>
+</head>
+<body>
+   <script>
+    let pen = {
+        color:"red",
+        length:3
+    };
+    console.log(pen.color);
+    console.log(pen['length']);
+    pen.lenght=4;//新しい不要なプロパティを作っちゃった！
+    delete pen.lenght;//ミスって作ったプロパティを削除
+    console.log(pen);
+
+    class Pencil{
+        constructor(length){
+            this.length=length;
+        }
+        write(){
+            this.length -= 0.5;
+            return '書きました';
+        }
+    }
+
+    let pencil = new Pencil(3);
+    console.log(pencil.length);
+    console.log(pencil.write());
+    console.log(pencil.length);
+   </script> 
+</body>
+</html>
